@@ -1,0 +1,166 @@
+body{
+    background-color: #E3E7E8;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    margin: auto;
+    transition: 0.5s;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 50px;
+    .shopping{
+        position: relative;
+        text-align: right;
+        
+    }
+    .shopping>img{
+        width: 30px;
+    }
+    .shopping>.quantity{
+        background-color: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position:absolute;
+        padding: 1px 8px;
+        top: -18px;
+        left: 80%;
+    }
+}
+.list{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    
+}
+.card{
+    position:fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background-color: #453E3B;
+    height: 100vh;
+    transition: 0.5s;
+     h1{
+        color:#E8BC0E;
+        font-weight: 100;
+        margin: 0;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+
+    }
+    .checkOut{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .checkOut div{
+        background-color: #E8BC0E;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+        
+    }
+    .checkOut div:nth-of-type(2){
+        background-color: #1C1F25;
+        color: #fff;
+    }
+
+}
+.active .card{
+    left: calc(100% - 500px);
+}
+.item{
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 20px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+}
+
+.item img{
+    width: 70% ;
+}
+.item .title{
+    font-weight: 600;
+}
+.item button{
+    background-color: #1C1F25;
+    color:#fff;
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3,1fr);
+    color: #fff;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard  img{
+    width: 100%;
+}
+
+.listCard button{
+    width: auto;
+    background-color: #fff5;
+    border: none;
+}
+.listCard .item{
+    display: grid;
+    grid-template-columns: 100px 150px 40px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    background-color: unset;
+}
+.listCard .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.listCard .quantity span:nth-child(2)
+{
+    background-color: transparent;
+    color: #eee;
+}
+.listCard .quantity span:nth-child(even)
+{
+    background-color: #eee1;
+}
+.listCard::-webkit-scrollbar{
+    width: 0;
+}
+.listCard .quantity .delete{
+    background-color: #eee !important;
+    color: #555;
+    text-align: center;
+}
